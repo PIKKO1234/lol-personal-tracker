@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+  
+  body {
+    background-color: #06020c;
+    background-image: 
+      radial-gradient(circle at 15% 15%, rgba(124, 58, 237, 0.15) 0%, transparent 40%),
+      radial-gradient(circle at 85% 80%, rgba(217, 70, 239, 0.12) 0%, transparent 45%),
+      radial-gradient(circle at 50% 50%, rgba(30, 11, 54, 0.5) 0%, transparent 70%);
+    background-attachment: fixed;
+  }
+}
+
+/* Custom Void Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0a0414;
+}
+::-webkit-scrollbar-thumb {
+  background: #281353;
+  border-radius: 4px;
+  border: 1px solid #43197f;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #7c3aed;
+  box-shadow: 0 0 10px #9333ea;
+}
+
+/* Void Glassmorphism */
+.void-glass {
+  background: rgba(15, 7, 32, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(124, 58, 237, 0.25);
+}
+
+.void-glass-hover:hover {
+  border-color: rgba(217, 70, 239, 0.5);
+  box-shadow: 0 0 25px rgba(168, 85, 247, 0.25);
+}
+
+/* Void Glow Text */
+.text-void-glow {
+  text-shadow: 0 0 15px rgba(217, 70, 239, 0.6), 0 0 30px rgba(124, 58, 237, 0.4);
+}
+
+.text-gold-glow {
+  text-shadow: 0 0 12px rgba(251, 191, 36, 0.6);
+}
+
+/* Void Shimmer Animation */
+@keyframes void-shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.void-shimmer {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(217, 70, 239, 0.15) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  background-size: 200% 100%;
+  animation: void-shimmer 3s infinite;
+}
