@@ -7,6 +7,6 @@ export default defineConfig({
   base: './', // enables easy static hosting / GitHub Pages
   server: {
     port: 3000,
-    open: false
+    open: true
   }
 });
